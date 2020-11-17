@@ -22,17 +22,24 @@
 # Результат: [12, 44, 4, 10, 78, 123].
 #
 
-base_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
-new_list1 = []
-new_list1 = [base_list[base_list.index(eli)] for eli in base_list if eli > base_list[base_list.index(eli)-1]]
-
-print(f"Исходный список: {base_list}")
-print(f"Новый список: {new_list1}")
+# base_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+# new_list1 = []
+# new_list1 = [base_list[base_list.index(eli)] for eli in base_list if eli > base_list[base_list.index(eli)-1]]
+#
+# print(f"Исходный список: {base_list}")
+# print(f"Новый список: {new_list1}")
 
 
 # 3. Для чисел в пределах от 20 до 240 найти числа, кратные 20 или 21. Необходимо решить задание в одну строку.
 # Подсказка: использовать функцию range() и генератор.
 #
+#
+# result = [number for number in range(20,240) if number %20 == 0 or number %21==0]
+# print(result)
+
+
+
+#for numbera in range(20.240)
 
 
 
