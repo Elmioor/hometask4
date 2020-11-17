@@ -1,19 +1,19 @@
 # 1. Реализовать скрипт, в котором должна быть предусмотрена функция расчета заработной платы сотрудника. В расчете необходимо использовать формулу: (выработка в часах*ставка в час) + премия. Для выполнения расчета для конкретных значений необходимо запускать скрипт с параметрами.
 
-from sys import argv
-
-
-def calculate_sallary(work_hours, sallary_per_hour, reward):
-    result_sallary =  (work_hours*sallary_per_hour) + reward
-    return result_sallary
-    #print(result_sallary)
-
-try:
-    file, work_hours, sallary_per_hour, reward = argv
-    print(calculate_sallary(int(work_hours), int(sallary_per_hour), int(reward)))
-except ValueError:
-    print("args problems")
-    exit()
+# from sys import argv
+#
+#
+# def calculate_sallary(work_hours, sallary_per_hour, reward):
+#     result_sallary =  (work_hours*sallary_per_hour) + reward
+#     return result_sallary
+#     #print(result_sallary)
+#
+# try:
+#     file, work_hours, sallary_per_hour, reward = argv
+#     print(calculate_sallary(int(work_hours), int(sallary_per_hour), int(reward)))
+# except ValueError:
+#     print("args problems")
+#     exit()
 
 
 # 2. Представлен список чисел. Необходимо вывести элементы исходного списка, значения которых больше предыдущего элемента.
@@ -21,9 +21,21 @@ except ValueError:
 # Пример исходного списка: [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55].
 # Результат: [12, 44, 4, 10, 78, 123].
 #
+
+base_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+new_list1 = []
+new_list1 = [base_list[base_list.index(eli)] for eli in base_list if eli > base_list[base_list.index(eli)-1]]
+
+print(f"Исходный список: {base_list}")
+print(f"Новый список: {new_list1}")
+
+
 # 3. Для чисел в пределах от 20 до 240 найти числа, кратные 20 или 21. Необходимо решить задание в одну строку.
 # Подсказка: использовать функцию range() и генератор.
 #
+
+
+
 # 4. Представлен список чисел. Определить элементы списка, не имеющие повторений. Сформировать итоговый массив чисел, соответствующих требованию. Элементы вывести в порядке их следования в исходном списке. Для выполнения задания обязательно использовать генератор.
 # Пример исходного списка: [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11].
 # Результат: [23, 1, 3, 10, 4, 11]
